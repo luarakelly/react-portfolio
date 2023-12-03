@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+/* Global CSS*/
+
+body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    -webkit-font-smoothing: Georgia, 'Times New Roman', Times, serif;
+    -moz-osx-font-smoothing: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6, p { margin: 0;}
+
+:root {
+    --primary: #d3d3d3;
+    --heading-color:#282938;
+    --bg-shade: #f5fcff;
+    --darkblue: #1c1e53;
+    --black: #000000;
+    --white: #ffffff;
+    --light-gray: rgb(200, 205, 214);
+    --green: #4c6444;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    min-height: 10vh;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 0.5s;
+    /* to take ant device into account: */
+    -webkit-border-radius:0.5rem;
+    -moz-border-radius:0.5rem;
+    -ms-border-radius:0.5rem;
+    -o-border-radius:0.5rem;
+
+    transition: background-color 0.5s;
+    /* to take ant device into account: */
+    -webkit-transition:background-color 0.5s;
+    -moz-transition:background-color 0.5s;
+    -ms-transition:background-color 0.5s;
+    -o-transition:background-color 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-outline{
+    color: var(--darkblue);
+    border: 0.1rem solid var(--darkblue);
+    background-color: var(--light-gray);
 }
 
-.App-link {
-  color: #61dafb;
+.btn-outline:hover{
+    color: var(--light-gray);
+    border: 0.1rem solid var(--darkblue);
+    background-color: var(--darkblue);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-green{
+    color: var(--primary);
+    border: 0.1rem solid var(--darkblue);
+    background-color: var(--green);
+}
+
+.btn-green:hover{
+    color: var(--light-gray);
+    border: 0.1rem solid var(--darkblue);
+    background-color: var(--darkblue);
+}
+
+.btn-github{
+    color:var(--white);
+    background-color: var(--black);
+    border: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 1px 0 rgba(16,24,40,0.95); */
+}
+
+.btn-github:hover{
+    color: var(--black);
+    background-color: var(--white);
+}
+
+/* paragraphts */
+h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    min-height: 3vh;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    min-height: 2vh;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    min-height: 1rem;
+}
+
+.text-lg{
+    color: var(--darkblue);
+    font-size: 0.5rem;
+    font-style: normal;
+    font-weight: 400;
+    min-height: 0.6vh;
+}
+
+.text-md{
+    color: var(--darkblue);
+    font-size: 0.4rem;
+    font-style: normal;
+    font-weight: 400;
+    min-height: 0.5vh;
+}
+
+.text-sm{
+    color: var(--black);
+    font-size: 0.3rem;
+    font-style: normal;
+    font-weight: 400;
+    min-height: 0.4vh;
+}
+
+/* Section Titles */
+
+/* Skills & About */
+.section--title{
+    color: var(--heading-color);
+    font-size: 1rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    min-height: 2vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Contact */
+.sub--title{
+    color: var(--heading-color);
+    font-size: 0.5rem;
+    font-weight: 600;
+    min-height: 1vh; 
+}
+
+/* Hero Section */
+
+.hero{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    padding: 1rem;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--light-gray);
+}
+
+img{
+    width: 20rem;
+    min-height: 80vh;
+    border-radius: 60%;
+    box-shadow: 0 1px 0 rgba(25, 30, 38, 0.95)
+}
+
+.hero--img{
+    margin-bottom: 10%;
+}
+
+.hero--box{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    z-index: 1;
+}
+
+.hero--content{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap:2rem;
+    margin-left: 3.3rem;
+}
+
+
+.hero--description{
+    line-height: 1.5rem;
+}
+
+.hero--box > button{
+    margin-bottom: 30%;
 }
