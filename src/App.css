@@ -6,7 +6,6 @@ body{
     -webkit-font-smoothing: Georgia, 'Times New Roman', Times, serif;
     -moz-osx-font-smoothing: Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
-    background-color: var(--light-gray);
 }
 
 h1, h2, h3, h4, h5, h6, p { margin: 0;}
@@ -15,11 +14,11 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
     --primary: #d3d3d3;
     --heading-color:#282938;
     --bg-shade: #f5fcff;
-    --darkblue: #1c1e53;
+    --darkblue: #171725;
     --black: #000000;
     --white: #ffffff;
     --light-gray: rgb(200, 205, 214);
-    --green: #4c6444;
+    --gray: #23252b;
 }
 
 .btn {
@@ -90,19 +89,19 @@ h1, h2, h3, h4, h5, h6, p { margin: 0;}
 
 /* paragraphts */
 h1{
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 700;
     min-height: 3vh;
 }
 
 h2{
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     min-height: 2vh;
 }
 
-h2{
-    font-size: 1.5rem;
+h3{
+    font-size: 2rem;
     font-weight: 700;
     min-height: 1rem;
 }
@@ -129,140 +128,131 @@ h2{
     font-style: normal;
     font-weight: 400;
     min-height: 0.4vh;
-}
-
-/* nav */
-/* Add this to your CSS file */
-
-.container {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-  }
-  
-  .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    width: 3rem; /* Initial collapsed width */
-    transition: width 0.3s ease; /* Add transition for smooth animation */
-  }
-  
-  .nav.expanded {
-    width: 200px; /* Adjust the expanded width as needed */
-  }
-  
-  .nav img {
-    max-width: 100px; /* Adjust the maximum width of your logo */
-  }
-  
-  .nav__hamburger {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    width: 30px;
-    height: 20px;
-  }
-  
-  .nav__link {
-    background-color: #fff;
-    height: 4px;
-    width: 100%;
-    margin: 3px 0;
-  }
-  
-  .nav--active {
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-    position: absolute;
-    top: 60px; /* Adjust the distance from the top */
-    right: 0; /* Align to the right of the container */
-    padding: 1rem;
-    text-align: center;
-    z-index: 1;
-    display: none;
-  }
-  
-  .nav--active.active {
-    display: flex;
-  }
-  
-  .nav--content {
-    color: #fff;
-    margin: 10px 0;
-    cursor: pointer;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .nav--content:hover {
-    color: #ffcc00; /* Change the color on hover */
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    background-color: #ffcc00;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #333;
-    color: #fff;
-  }
-  
+}  
 
 /* Section Titles */
 
-/* Skills & About */
 .section--title{
     color: var(--heading-color);
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
     font-style: normal;
     font-weight: 600;
-    min-height: 2vh;
+    min-height: 3.5vh;
     display: flex;
     align-items: flex-start;
 }
 
-/* Contact */
 .sub--title{
-    color: var(--heading-color);
-    font-size: 0.5rem;
-    font-weight: 600;
-    min-height: 1vh; 
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 550;
+    min-height: 2.5vh; 
 }
 
-/* Hero Section */
+/* nav */
+.nav--container {
+    display: flex;
+    justify-content: flex-end;    
+}
+  
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #333;
+    color: var(--white);
+    width: 3rem; /* Initial collapsed width */
+    transition: width 0.3s ease; /* Add transition for smooth animation */
+    position: fixed;
+    border-radius: 5% 0% 30% 70%;
+    box-shadow: 0 1px 0 var(--darkblue);
+}
+ 
+/*
+.nav img {
+    max-width: 100px; 
+}
+*/
+  
+.nav__hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 20px; 
+    z-index: 3;  
+}
+  
+.nav__link {
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    margin: 3px 0;
 
-.hero{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 55% 45%;
+}
+  
+.nav--items {
+    min-width: 9rem;
+    display:flex;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 0; /* Adjust the distance from the top */
+    right: 0; /* Align to the right of the container */
     padding: 1rem;
     align-content: center;
     justify-content: center;
+    border-radius: 0 0 0 70%;
+    display: none;
+    overflow: hidden;
+}
+  
+.nav--items.active {
+    display: flex;
+    flex-direction: column;
+}
+  
+.nav--content {
+    display: flex;
+    color: #fff;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+   
+}
+  
+.nav--content:hover {
+    color:var(--darkblue); /* Change the color on hover */
+}
+  
+/* Hero Section */
+
+.hero{
+    min-height: 9vh;
+    display: flex;
+    padding: 1rem;
+    align-content: center;
+    justify-content: space-evenly;
     gap: 2rem;
     background-color: var(--light-gray);
+    
 }
 
 img{
-    width: 20rem;
-    min-height: 80vh;
+    max-width: 40rem;
     border-radius: 60%;
     box-shadow: 0 1px 0 rgba(25, 30, 38, 0.95)
+    
 }
 
 .hero--img{
-    margin-bottom: 10%;
+    max-height: 100vh;
+    margin-top: 5%;
+    overflow: hidden;
 }
 
 .hero--box{
@@ -272,7 +262,8 @@ img{
     align-items: center;
     justify-content: center;
     gap:2rem;
-    z-index: 1;
+    z-index: 2;
+    
 }
 
 .hero--content{
@@ -292,4 +283,55 @@ img{
 
 .hero--box > button{
     margin-bottom: 30%;
+}
+
+/* Skills Section */
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10rem 8rem;
+    gap: 4rem;
+    align-content:center;
+    justify-content:flex-start;
+    background-color:var(--gray);
+}
+
+.skills--box{
+    display: flex;
+    flex-direction: column;
+    max-height: 33.3vh;
+    padding: 1rem;
+    gap: 3rem;
+    align-content:center;
+    justify-content:flex-start;
+    background-color:var(--gray);
+}
+
+.skills--content{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 1rem;
+    background-color: var(--primary);
+    border-radius: 5%;
+}
+
+.skills--card{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;  
+    gap: rem;
+}
+
+.icon{
+    width: 40%; 
+}
+
+.skills--fontend{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-content: space-between; 
 }

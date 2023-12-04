@@ -1,0 +1,25 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "scr": "#",
+            "title": "Front-End: Job Search App",
+            "description": "Basic mobile user inface 'Job Search App', buildt with Expo native and fetching API to display the job search content.",
+            "git-hub-repo": "https://github.com/luarakelly/Job-Search-App"
+        },
+        {
+            "id": "2",
+            "scr": "#",
+            "title": "Full-Stack: Energy Saving App",
+            "description": "Django web application that calculate the power rate and total energy consumption of inputted electronics.",
+            "git-hub-repo": "https://github.com/luarakelly/Energy-Saving-App"
+        },
+        {
+            "id": "3",
+            "scr": "#",
+            "title": "Front-End: Portifolio Landing Page",
+            "description": "It is a static webpage for promoting and marketing. Additionally there is a action button for sending e-mal to the promoter.",
+            "git-hub-repo": "https://github.com/luarakelly/react-portfolio"
+        }
+    ]
+}

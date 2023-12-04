@@ -1,11 +1,11 @@
 import HeroSection from "../Home/HeroSection";
-import Nav from "../Nav";
+import Skills from "../Home/SkillsSection";
 
 export default function Home(){
     return(
         <>
-            <Nav/>
             <HeroSection/>
+            <Skills/>
         </>
     );
 };

@@ -4,8 +4,8 @@ import { Link } from "react-scroll";
 export default function Navmenu() {
   const [navActive, setNavActive] = useState(false);
 
-  const toggleNav = () => {
-    setNavActive(!navActive);
+  const openMenu = () => {
+    setNavActive(true);
   };
 
   const closeMenu = () => {
@@ -13,20 +13,20 @@ export default function Navmenu() {
   };
 
   return (
-    <div className="container">
+    <div className="nav--container">
     {/* <div>
         <img src="#" alt="LK" />
-    </div> */}
-    <nav className={`nav ${navActive ? "active" : ""}`}>
-      <div
-        className={`nav__hamburger ${navActive ? "active" : ""}`}
-        onClick={toggleNav}
+      </div> */}
+    <nav className= {`nav ${navActive ? "active" : "notActive"}`}>
+      <Link
+        className={`nav__hamburger ${navActive ? "active" : "notActive"}`}
+        onClick={openMenu}
       >
         <span className="nav__link"></span>
         <span className="nav__link"></span>
         <span className="nav__link"></span>        
-      </div>
-      <div className={`nav--active ${navActive ? "active" : ""}`}>
+      </Link>
+      <div className={`nav--items ${navActive ? "active" : "notActive"}`}>
         <ul>
           <li>
             <Link
@@ -41,7 +41,9 @@ export default function Navmenu() {
             >
               Home
             </Link>
-            <Link
+          </li>
+          <li>
+          <Link
               onClick={closeMenu}
               activeClass="nav--active"
               spy={true}
@@ -53,7 +55,9 @@ export default function Navmenu() {
             >
               Portfolio
             </Link>
-            <Link
+          </li>
+          <li>
+          <Link
               onClick={closeMenu}
               activeClass="nav--active"
               spy={true}
@@ -76,7 +80,7 @@ export default function Navmenu() {
             offset={-70}
             duration={500}
             to="ContactSection"
-            className="btn"
+            className="btn btn__"
           >
             Contact Me
           </Link>
