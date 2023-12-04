@@ -13,7 +13,7 @@ export default function Projects(){
                     <div key={index} className='project--content'>
                         <div className='project--card'>
                             <div className='project--card--img'>
-                                <img src={project.src} alt="App" />
+                                <img className='project-img' src={project.src} alt="App" />
                             </div>
                             <dir className="project--card--info">
                                 <h3 className='project--card--title'>{project.title}</h3>

@@ -19,16 +19,14 @@ export default function Skills(){
                             <img className='icon' src={skill.src} alt={skill.title}/>  
                         </div>
                     ))}
-                </div>
-                <div className='skills--content'>
+                
                     <h3>Backend</h3>
                     {data?.skills['back-end']?.map((skill, index)=>(
                         <div key= {index} className='skills--icon'>
                             <img className='icon' src={skill.src} alt={skill.title}/>  
                         </div>
                     ))}
-                </div>
-                <div className='skills--content'>
+               
                     <h3>DevOps</h3>
                     {data?.skills['dev-ops']?.map((skill, index)=>(
                         <div key= {index} className='skills--icon'>

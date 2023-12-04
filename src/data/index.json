@@ -70,13 +70,8 @@
           "src": "./imgs/icons/icon-github.png",
           "title": "Github",
           "description": " "
-        },
-        {
-          "id": "12",
-          "src": "#",
-          "title": " ",
-          "description": " "
         }
+        
       ]
     }
   }
