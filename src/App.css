@@ -6,6 +6,7 @@ body{
     -webkit-font-smoothing: Georgia, 'Times New Roman', Times, serif;
     -moz-osx-font-smoothing: Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
+    background-color: var(--light-gray);
 }
 
 h1, h2, h3, h4, h5, h6, p { margin: 0;}
@@ -108,18 +109,20 @@ h3{
 
 .text-lg{
     color: var(--darkblue);
-    font-size: 0.5rem;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 400;
-    min-height: 0.6vh;
+    min-height: 1vh;
+    padding: 1rem;
 }
 
 .text-md{
     color: var(--darkblue);
-    font-size: 0.4rem;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 400;
-    min-height: 0.5vh;
+    min-height: 1vh;
+    padding: 1rem;
 }
 
 .text-sm{
@@ -133,8 +136,8 @@ h3{
 /* Section Titles */
 
 .section--title{
-    color: var(--heading-color);
-    font-size: 2rem;
+    color: var(--primary);
+    font-size: 1.5rem;
     text-align: center;
     font-style: normal;
     font-weight: 600;
@@ -144,7 +147,7 @@ h3{
 }
 
 .sub--title{
-    color: var(--primary);
+    color: var(--darkblue);
     font-size: 1.5rem;
     font-weight: 550;
     min-height: 2.5vh; 
@@ -232,7 +235,7 @@ h3{
 /* Hero Section */
 
 .hero{
-    min-height: 9vh;
+    max-height: 90vh;
     display: flex;
     padding: 1rem;
     align-content: center;
@@ -241,18 +244,17 @@ h3{
     background-color: var(--light-gray);
     
 }
+.hero--img{
+    max-height: 100vh;
+    margin-top: 5%;
+    overflow: hidden;
+}
 
 img{
     max-width: 40rem;
     border-radius: 60%;
     box-shadow: 0 1px 0 rgba(25, 30, 38, 0.95)
     
-}
-
-.hero--img{
-    max-height: 100vh;
-    margin-top: 5%;
-    overflow: hidden;
 }
 
 .hero--box{
@@ -281,17 +283,12 @@ img{
     line-height: 1.5rem;
 }
 
-.hero--box > button{
-    margin-bottom: 30%;
-}
-
 /* Skills Section */
-
 .skills{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    padding: 10rem 8rem;
+    min-height: 60vh;
+    padding: 5rem 8rem;
     gap: 4rem;
     align-content:center;
     justify-content:flex-start;
@@ -299,39 +296,76 @@ img{
 }
 
 .skills--box{
-    display: flex;
-    flex-direction: column;
-    max-height: 33.3vh;
+    display: block;
+    max-height: 60vh;
     padding: 1rem;
-    gap: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     align-content:center;
-    justify-content:flex-start;
-    background-color:var(--gray);
+    background-color:var(--primary);
+    border-radius: 2%;
+    box-shadow: 8px 8px 0  rgba(62, 69, 81, 0.95)
+}
+
+.skills--box--title{
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-right: 7rem;
 }
 
 .skills--content{
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
-    gap: 1rem;
-    background-color: var(--primary);
-    border-radius: 5%;
+    margin-left: 4rem;
+    margin-right: 3rem;    
 }
 
-.skills--card{
+.skills--icon{
+    width: 8rem;
+    height: auto; 
     display: flex;
+    padding: 1rem;
     justify-content: center;
-    align-content: space-between;  
-    gap: rem;
+
 }
 
 .icon{
     width: 40%; 
+    border-radius: 0%;
+    box-shadow: 1px 1px  1px 1px  rgba(25, 30, 38, 0.95)
+
 }
 
-.skills--fontend{
+/* About Section */
+.skills--content2 {
+    min-height: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    align-content: space-between; 
+    align-items: flex-start;
 }
+
+.skills--card {
+    border-radius: 0%;
+    box-shadow: 1px 1px 1px 1px rgba(25, 30, 38, 0.95);
+    width: fit-content;
+    min-height: 30vh;
+    margin-left: 3vw;
+    border-radius: 0%;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    height: 55vh;
+    grid-column: span 1; /* This will make the image span only one column */
+    justify-self: center; /* This will center the image horizontally within its column */
+}
+
+/* Add a new class to style the title */
+.skills--box--title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Add some spacing below the title */
+}
+
+/* Portfolio Projects */

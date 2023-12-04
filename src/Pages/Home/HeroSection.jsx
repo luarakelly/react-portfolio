@@ -6,9 +6,11 @@ export default function HeroSection(){
                     <p className="hero--oppening sub--title">Hey, I'm Luara!</p>
                     <h1 className="hero--title">Software Developer</h1>
                     <p className="hero--description sub--title">
-                    ICT enthusiast, eager to make an impact through technology! 
-                    <br /> 
-                    Currently working with React.js and Django.
+                    Currently focused on React, but still exploring other technologies 
+                    <br />
+                    and frameworks that catch my interest! if you're looking for 
+                    <br />
+                    a developer to add to your team, I'd love to hear from you!
                     </p>
                 </div>
                 <button className="btn btn-outline"> Get in touch with me </button>

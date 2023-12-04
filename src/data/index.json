@@ -5,25 +5,25 @@
           "id": "1",
           "src": "/imgs/icons/icon-css.png",
           "title": "CSS",
-          "description": "Basic mobile user interface 'Job Search App', built with Expo native and fetching API to display the job search content."
+          "description": " "
         },
         {
           "id": "2",
           "src": "./imgs/icons/icon-html.png",
           "title": "HTML",
-          "description": "Django web application that calculates the power rate and total energy consumption of inputted electronics."
+          "description": " "
         },
         {
           "id": "3",
           "src": "./imgs/icons/icon-js.png",
           "title": "JavaScript",
-          "description": "It is a static webpage for promoting and marketing. Additionally, there is an action button for sending email to the promoter."
+          "description": " "
         },
         {
           "id": "4",
           "src": "./imgs/icons/icon-reactjs.png",
           "title": "ReactJs",
-          "description": "It is a static webpage for promoting and marketing. Additionally, there is an action button for sending email to the promoter."
+          "description": " "
         }
       ],
       "back-end": [
@@ -31,19 +31,25 @@
           "id": "5",
           "src": "./imgs/icons/icon-nodejs.png",
           "title": "NodeJs",
-          "description": "It is a static webpage for promoting and marketing. Additionally, there is an action button for sending email to the promoter."
+          "description": " "
         },
         {
           "id": "6",
           "src": "./imgs/icons/icon-python.png",
           "title": "Python",
-          "description": "It is a static webpage for promoting and marketing. Additionally, there is an action button for sending email to the promoter."
+          "description": " "
         },
         {
           "id": "7",
           "src": "./imgs/icons/icon-django.png",
           "title": "Django",
-          "description": "It is a static webpage for promoting and marketing. Additionally, there is an action button for sending email to the promoter."
+          "description": " "
+        },
+        {
+          "id": "11",
+          "src": "#",
+          "title": " ",
+          "description": " "
         }
       ],
       "dev-ops": [
@@ -51,19 +57,25 @@
           "id": "8",
           "src": "./imgs/icons/icon-vsc.png",
           "title": "Visual Studio Code",
-          "description": "It is a static webpage for promoting and marketing. Additionally, there is an action button for sending email to the promoter."
+          "description": " "
         },
         {
           "id": "9",
           "src": "./imgs/icons/icon-git.png",
           "title": "Git",
-          "description": "It is a static webpage for promoting and marketing. Additionally, there is an action button for sending email to the promoter."
+          "description": " "
         },
         {
           "id": "10",
           "src": "./imgs/icons/icon-github.png",
           "title": "Github",
-          "description": "It is a static webpage for promoting and marketing. Additionally, there is an action button for sending email to the promoter."
+          "description": " "
+        },
+        {
+          "id": "12",
+          "src": "#",
+          "title": " ",
+          "description": " "
         }
       ]
     }
