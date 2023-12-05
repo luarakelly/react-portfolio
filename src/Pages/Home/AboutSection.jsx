@@ -9,7 +9,7 @@ export default function About() {
             <div className="skills--content2">
                 <div className='skills--card'>
                 <h3 className='text-lg'>Cros-Industry Experience</h3>
-                    <p className='text-md'>Before web deveopment, I was an microbiologist and teacher. My backgroung gave me possible to develop my communicaion and team work skills. </p>
+                    <p className='text-md'>Before web deveopment, I was a microbiologist and teacher. My backgroung contributed with my communicaion and team work skills. </p>
                 </div>
                 <div className='skills--card'>
                 <h3 className='text-lg'>Languages Knowledge levels</h3>
@@ -21,16 +21,13 @@ export default function About() {
                 <img className='profile-photo' src="./imgs/profile/profile.jpg" alt="Profile pic" />
                 <div className='skills--card'>
                 <h3 className='text-lg'>Full-Stack Familiarizarion</h3>
-                    <p className='text-md'>As a researcher by nature, for me it is importante to khow all sides of application development process. That is why, I am always willing to learn new technologies.</p>
+                    <p className='text-md'>As a researcher by nature, for me it is importante to khow all sides of the application development process. That is why, I am always willing to learn new technologies.</p>
                 </div>
                 <div className='skills--card'>
                 <h3 className='text-lg'>Hobbies</h3>
-                    <p className='text-md'>I am quite active person, enjoy outside activities and sports related, such as montain biking, rollerblading, hiking, and cliing.</p>
+                    <p className='text-md'>I am quite active person, enjoy outside activities and sports related, such as montain biking, rollerblading, hiking, and clibing.</p>
                 </div>
             </div>
-            <p className="text-lg">
-                Come checkout my projects!
-            </p>
         </section>
     );
 }

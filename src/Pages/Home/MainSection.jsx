@@ -2,29 +2,12 @@ import data from '../../data/projects.json';
 
 export default function Projects(){
     return(
-        <section className='skills' id='skills'>
-            <div className='portfolio-container'>
+        <section className='projects' id='projects'>
+            <div className='projects--header'>
+            <div className='portfolio--title'>
                 <p className='section--title'>Portfolio</p>
-                <h2 className='skills--oppening'>Projects:</h2>
-                
+                <h2>Projects:</h2>
             </div>
-            <div className='projects--box'>
-                {data?.projects?.map((project, index)=>(
-                    <div key={index} className='project--content'>
-                        <div className='project--card'>
-                            <div className='project--card--img'>
-                                <img className='project-img' src={project.src} alt="App" />
-                            </div>
-                            <dir className="project--card--info">
-                                <h3 className='project--card--title'>{project.title}</h3>
-                                <p className='project--card--description'>{project.description}</p>
-                                
-                            </dir>
-                        </div>
-                    </div>
-                ))};
-            </div>
-            <div>
             <button className='btn btn-github'>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +25,21 @@ export default function Projects(){
                 </svg>
                     Visit My GitHub
             </button>
+            </div>
+            <div className='projects--container'>
+                {data?.projects?.map((project, index)=>(
+                    <div key={index} className='project--content'>
+                        <div className='project--card'>
+                            <div className='project--card--img'>
+                                <img className='project-img' src={project.src} alt="App" />
+                            </div>
+                            <dir className="project--card--info">
+                                <h3 className='text-md'>{project.title}</h3>
+                                <p className='text-sm'>{project.description}</p>
+                            </dir>
+                        </div>
+                    </div>
+                ))}
             </div>
         </section>
     );
