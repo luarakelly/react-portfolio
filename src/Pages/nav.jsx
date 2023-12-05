@@ -18,14 +18,14 @@ export default function Navmenu() {
         <img src="#" alt="LK" />
       </div> */}
     <nav className= {`nav ${navActive ? "active" : "notActive"}`}>
-      <Link
+      <div
         className={`nav__hamburger ${navActive ? "active" : "notActive"}`}
         onClick={openMenu}
       >
         <span className="nav__link"></span>
         <span className="nav__link"></span>
         <span className="nav__link"></span>        
-      </Link>
+      </div>
       <div className={`nav--items ${navActive ? "active" : "notActive"}`}>
         <ul>
           <li>

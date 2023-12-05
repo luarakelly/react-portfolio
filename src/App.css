@@ -357,33 +357,34 @@ h3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin: 1.5rem;
 }
 
 .skills--card {
-    border-radius: 0%;
-    box-shadow: 1px 1px 1px 1px rgba(25, 30, 38, 0.95);
-    width: fit-content;
-    min-height: 30vh;
-    margin-left: 3vw;
-    border-radius: 0%;
+  border-radius: 8px; /* Add border-radius for a softer appearance */
+  box-shadow: 1px 1px 1px 1px rgba(25, 30, 38, 0.95);
+  width: 100%;
+  min-height: 30vh;   
+   
 }
 
 .profile-photo {
-    border-radius: 50%;
-    height: 55vh;
-    grid-column: span 1; /* This will make the image span only one column */
-    justify-self: center; /* This will center the image horizontally within its column */
+  border-radius: 50%;
+  height: 55vh;
+  grid-column: span 1; /* This will make the image span only one column */
+  justify-self: center; /* This will center the image horizontally within its column */
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-/* Add a new class to style the title */
-.skills--box--title {
-    text-align: center; /* Center the title */
-    margin-bottom: 20px; /* Add some spacing below the title */
+.skills--box--title { 
+    text-align: center;
+    margin-bottom: 20px; 
 }
 
 /* Portfolio Projects */
-  
   .projects--box {
     display: flex;
     flex-wrap: wrap;
@@ -392,14 +393,13 @@ h3{
   }
   
   .project--content {
-    flex: 0 0 calc(33.333% - 20px); /* Adjust the width of each project card */
-    margin-bottom: 20px; /* Add margin between project cards */
+    flex: 0 0 calc(33% - 20px); /* Adjust the width of each project card */
+    margin-bottom: 20px; 
   }
   
   .project--card {
-    /* Add styles for the project card container */
-    border: 1px solid #ccc; /* Example border style */
-    border-radius: 8px; /* Example border-radius */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
     overflow: hidden; /* Hide any overflow content */
     max-width: 30rem;
     max-height: 60vh;
@@ -416,7 +416,7 @@ h3{
   }
   
   .project--card--info {
-    padding: 15px; /* Add padding to the project card information */
+    padding: 15px; 
   }
   
   
@@ -426,7 +426,6 @@ h3{
   }
   
 /* Contact section */
-
 .contact--section {
     display: flex;
     padding: 150px 85px;
@@ -501,41 +500,17 @@ h3{
 /* Footer */
 .footer--container {
     display: flex;
-    padding: 106.667px 85.333px;
+    padding: 10vw;
     flex-direction: column;
     align-items: flex-start;
-    background: var(--bg-shade);
+    background: var(--light-gray);
     align-items: center;
     align-self: stretch;
   }
-  .footer--link--container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-  }
-  .footer--items > ul {
-    list-style: none;
-    display: flex;
-    align-items: flex-start;
-    gap: 42.667px;
-    text-decoration: none;
-  }
-  .footer--items ul > li > a {
-    text-decoration: none;
-  }
-  .footer--social--icon > ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 16px;
-    flex-shrink: 0;
-    text-decoration: none;
-  }
+  
   .divider {
-    margin: 106px 0 42.67px;
-    height: 1.333px;
+    margin: 5vw;
+    height: 0.5vh;
     width: 100%;
     background: rgba(40, 41, 56, 0.55);
   }
@@ -547,39 +522,80 @@ h3{
   }
   .footer--content {
     color: var(--black);
-    font-size: 18.667px;
+    font-size: 2vw;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 1rem;
   }
 
 
-/* Media query for small screens (up to 767px) */
-@media (max-width: 600px) {
-    .skills {
-        min-height: 100%;
-        align-items: center; /* Center items horizontally */
-        padding: 1rem; /* Adjust padding for smaller screens */
-    }
+/* Media query for small screens (up to 600px) */
+@media screen and (max-width: 600px) {
+  h2{
+    font-size: 5.5vw;
+  }
+  h3{
+    font-size: 4.5vw;
+  }
 
-    .skills--box {
-        max-width: 100%;
-        max-height: 200vh;
+  .text-lg {
+    font-size: 1.5rem; /* Increase the font size for better readability */
+  }
 
-        margin: 0 0 2rem 0; /* Adjust margins for smaller screens */
-    }
+.text-md {
+    font-size: 1rem; /* Increase the font size for better readability */
+  }
 
-    .skills--content {
-        margin: 0.5rem; /* Remove margin on small screens */
-        justify-content: center; /* Center content horizontally */
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap; /* Allow content to wrap on small screens */
-    }
+  /* Hero Section */
+  .hero {
+    flex-direction: column; /* Stack items vertically on small screens */ 
+    max-height: 250vh;    
+  }
+
+  .hero--box {
+    min-height: auto; /* Remove min-height on small screens */
+  }
+
+  /* skills Section */
+  .skills {
+    min-height: 100%;
+    align-items: center; /* Center items horizontally */
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .skills--box {
+    max-width: 100%;
+    max-height: 250vh;
+
+    margin: 0 0 2rem 0; /* Adjust margins for smaller screens */
+  }
+
+  .skills--content {
+    margin: 0.5rem; /* Remove margin on small screens */
+    justify-content: center; /* Center content horizontally */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Allow content to wrap on small screens */
+  }
+
+  /*About section */
+  .skills--content2 {
+    margin: 5px; 
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skills--card {
+    width: 100%; /* Make the cards take full width on smaller screens */
+    height: 100%;
+    margin: 0 auto; /* Center the cards */
     
+}
 
-    h3{
-        font-size: 4.5vw;
-    }
-    
-   
+  .profile-photo {
+    grid-column: span 3; /* Make the image span all three columns on smaller screens */
+  }
+
+  /* Footer */
+  .footer--content {
+    font-size: 4vw;
+  }
 }

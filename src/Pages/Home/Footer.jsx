@@ -8,7 +8,6 @@ function Footer() {
       <hr className="divider" />
       <div className="footer--content--container">
         <p className="footer--content">Made with 🎔, by Luara Kelly!</p>
-        
       </div>
     </footer>
   );
