@@ -3,7 +3,7 @@ import data from '../../data/index.json';
 export default function Skills(){
     return(
         <section className='skills' id='skills'>
-            <div className='portfolio-container'>
+            <div className='skills--container'>
                 <p className='section--title'>My Skills</p>
             </div>
             {// Thecnical skills
