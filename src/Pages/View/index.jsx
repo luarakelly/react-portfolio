@@ -1,11 +1,11 @@
-import HeroSection from "../Home/HeroSection";
-import Skills from "../Home/SkillsSection";
-import About from "../Home/AboutSection";
-import Projects from "../Home/MainSection";
-import Contact from "../Home/ContactSection";
-import Footer from "../Home/Footer";
+import HeroSection from "../LandingPage/HeroSection";
+import Skills from "../LandingPage/SkillsSection";
+import About from "../LandingPage/AboutSection";
+import Projects from "../LandingPage/MainSection";
+import Contact from "../LandingPage/ContactSection";
+import Footer from "../LandingPage/Footer";
 
-export default function Home(){
+export default function Portfolio(){
     return(
         <>
             <HeroSection/>
