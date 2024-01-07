@@ -1,4 +1,4 @@
-import data from '../../data/index.json';
+import data from '../../data/skills.json';
 
 export default function Skills(){
     return(
@@ -6,34 +6,37 @@ export default function Skills(){
             <div className='skills--container'>
                 <p className='section--title'>My Skills</p>
             </div>
-            {// Thecnical skills
-            }
+            {/*Thecnical skills*/}
             <div className='skills--box'>
                 <h2 className='skills--box--title'>Technical Skills</h2>
-                <hr></hr>
-                <br />
-                <div className='skills--content'>
-                    <h3>Frontend</h3>
-                    {data?.skills['front-end']?.map((skill, index)=>(
-                        <div key= {index} className='skills--icon'>
-                            <img className='icon' src={skill.src} alt={skill.title}/>  
-                        </div>
-                    ))}
-                
-                    <h3>Backend</h3>
-                    {data?.skills['back-end']?.map((skill, index)=>(
-                        <div key= {index} className='skills--icon'>
-                            <img className='icon' src={skill.src} alt={skill.title}/>  
-                        </div>
-                    ))}
-               
-                    <h3>DevOps</h3>
-                    {data?.skills['dev-ops']?.map((skill, index)=>(
-                        <div key= {index} className='skills--icon'>
-                            <img className='icon' src={skill.src} alt={skill.title}/>  
-                        </div>
-                    ))}
-                </div>
+                <table className='skills--content'>
+                <tbody>
+                    <tr>
+                        <td><h3>Frontend</h3></td>
+                        <td className='skills--icon'>
+                            {data?.skills['front-end']?.map((skill, index)=>(
+                                <img  key= {index} className='icon' src={skill.src} alt={skill.title}/>  
+                            ))}
+                        </td>                 
+                    </tr>
+                    <tr>
+                        <td><h3>Backend</h3></td>
+                        <td className='skills--icon'>
+                        {data?.skills['back-end']?.map((skill, index)=>(
+                            <img key= {index} className='icon' src={skill.src} alt={skill.title}/>  
+                        ))}
+                        </td>                 
+                    </tr>
+                    <tr>
+                        <td><h3>DevOps</h3></td>
+                        <td className='skills--icon'>
+                        {data?.skills['dev-ops']?.map((skill, index)=>(
+                            <img key= {index} className='icon' src={skill.src} alt={skill.title}/>                          
+                        ))}
+                        </td>                 
+                    </tr>
+                </tbody>
+                </table>
             </div>
         </section>
     );
