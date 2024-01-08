@@ -9,12 +9,12 @@ export default function About() {
             
             <div className="skills--content2">
                 <div className='skills--card'>
-                    <h3 className='text-lg'>Cros-Industry Experience</h3>
-                    <p className='text-md'>Before web deveopment, I was a microbiologist and teacher. My backgroung contributed with my communicaion and team work skills. </p>
+                    <h3 className='text-lg'>Cross-Industry Experience</h3>
+                    <p className='text-md'>Before web deveopment, I was a microbiologist and teacher. My backgroung contributed with my communication and team work skills. </p>
                 </div>
                 <div className='skills--card'>
                     <h3 className='text-lg'>Languages Knowledge levels</h3>
-                    <p className='text-md'>I have fluent English, Intermediate Spannish and Basic Finnish. My native language in Portuguese.</p>
+                    <p className='text-md'>I have fluent English, Intermediate Spanish and Basic Finnish. My native language in Portuguese.</p>
                 </div>
             </div>
             <div className='profile-photo-box'>
@@ -22,12 +22,12 @@ export default function About() {
             </div>
             <div className="skills--content2">
                 <div className='skills--card'>
-                    <h3 className='text-lg'>Full-Stack Familiarizarion</h3>
-                    <p className='text-md'>As a researcher by nature, for me it is importante to khow all sides of the application development process. That is why, I am always willing to learn new technologies.</p>
+                    <h3 className='text-lg'>Full-Stack Familiarization</h3>
+                    <p className='text-md'>As a researcher by nature, for me it is important to know all sides of the application development process. That is why, I am always willing to learn new technologies.</p>
                 </div>
                 <div className='skills--card'>
                     <h3 className='text-lg'>Hobbies</h3>
-                    <p className='text-md'>I am quite active person, enjoy outside activities and sports related, such as montain biking, rollerblading, hiking, and clibing.</p>
+                    <p className='text-md'>I am quite active person, enjoy outside activities and sports related, such as mountain biking, rollerblading, hiking, and climbing.</p>
                 </div>
             </div>
         </section>

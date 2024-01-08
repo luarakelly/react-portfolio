@@ -7,7 +7,7 @@ export default function HeroSection(){
                     <h1 className="hero--title">Software Developer</h1>
                     <p className="hero--description sub--title">
                     Currently focused on React, but still exploring other technologies 
-                    and frameworks that catch my interest! if you're looking for 
+                    and frameworks that catch my interest! If you're looking for 
                     a developer to add to your team, I'd love to hear from you!
                     </p>
                 </div>
