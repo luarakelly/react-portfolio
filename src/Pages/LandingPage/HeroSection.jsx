@@ -1,6 +1,8 @@
+import { Link } from "react-scroll";
+
 export default function HeroSection(){
     return(
-        <section id="hero" className="hero"> 
+        <section id="HeroSection" className="hero"> 
             <div className="hero--box">
                 <div className="hero--content">
                     <p className="hero--oppening sub--title">Hey, I'm Luara!</p>
@@ -11,7 +13,11 @@ export default function HeroSection(){
                     a developer to add to your team, I'd love to hear from you!
                     </p>
                 </div>
-                <button className="btn btn-outline"> Get in touch with me </button>
+                <button className="btn btn-outline"> 
+                <Link spy={true} smooth={true} offset={-70} duration={500} to="ContactSection" className="btn btn__">
+                    Get in touch with me!
+                </Link> 
+                </button>
             </div>
             <div className="hero--img">
                 <img src="./imgs/profile/profile-lightgray.png" alt="Oppenin Section"/>

@@ -2,13 +2,13 @@ import data from '../../data/projects.json';
 
 export default function Projects(){
     return(
-        <section className='projects' id='projects'>
+        <section className='projects' id='MainSection'>
             <div className='projects--header'>
             <div className='portfolio--title'>
                 <p className='section--title'>Portfolio</p>
                 <h2>Projects:</h2>
             </div>
-            <button className='btn btn-github'>
+            <button className='btn btn-github' onClick={() => window.open('https://github.com/luarakelly', '_blank')}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"

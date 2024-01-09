@@ -1,32 +1,122 @@
+import { useState } from "react";
+import axios from "axios";
+
 export default function Contact() {
+  const [input, setInput] = useState({
+    fname:'',
+    lname:'',
+    email:'',
+    phoneNumber:'',
+    topic:'',
+    message:'',
+    sent:false,
+  });
+
+  const [successMessage, setSuccessMessage] = useState('');
+
+  //handle inputs
+  const handleFname = (e) => {
+    setInput({
+      ...input,
+      fname:e.target.value
+    })
+  };
+
+  const handleLname = (e) => {
+    setInput({
+      ...input,
+      lname:e.target.value
+    })
+  };
+  const handleEmail = (e) => {
+    setInput({
+      ...input,
+      email:e.target.value
+    })
+  };
+  const handlePhoneNumber = (e) => {
+    setInput({
+      ...input,
+      phoneNumber:e.target.value
+    })
+  };
+  const handleTopic = (e) => {
+    setInput({
+      ...input,
+      topic:e.target.value
+    })
+  };
+  const handleMessage = (e) => {
+    setInput({
+      ...input, //This ensures that you preserve the existing state and only update the field that corresponds to the input being changed.
+      message:e.target.value
+    })
+  };
+
+  //Submit
+  const formSubmit= (e)=>{
+    e.preventDefault();
+
+    let data= {
+      fname: input.fname,
+      lname:input.lname,
+      email:input.email,
+      phoneNumber:input.phoneNumber,
+      topic:input.topic,
+      message:input.message,
+    }
+
+    // http requests
+    axios.post('http://localhost:5000/api/contactForm', data)
+    .then(res=>{
+      setInput({sent:true})
+      setSuccessMessage('Message sent successfully! Check your email for further details.');
+    }).catch(()=>{
+      console.log('message not sent');
+    })
+    
+  }
+
+  //For resetting initial state
+
+
     return (
-      <section id="Contact" className="contact--section">
+      <section id="ContactSection" className="contact--section">
         <div>
           <h2>Contact Me</h2>
           <p className="text-lg">
             Let's together transform ideas into web applications!
           </p>
         </div>
-        <form className="contact--form--container">
+        <form 
+          action="" 
+          method="POST" 
+          className="contact--form--container"
+          onSubmit={formSubmit}
+        >
           <div className="container">
-            <label htmlFor="first-name" className="contact--label">
+            <label htmlFor="fname" className="contact--label">
               <span className="text-md">First Name</span>
               <input
                 type="text"
                 className="contact--input text-md"
-                name="first-name"
-                id="first-name"
+                name="fname"
+                id="fname"
                 required
+                value={input.fname}
+                onChange={handleFname}
               />
             </label>
-            <label htmlFor="last-name" className="contact--label">
+            <label htmlFor="lname" className="contact--label">
               <span className="text-md">Last Name</span>
               <input
                 type="text"
                 className="contact--input text-md"
-                name="last-name"
-                id="last-name"
+                name="lname"
+                id="lname"
                 required
+                value={input.lname}
+                onChange={handleLname}
               />
             </label>
             <label htmlFor="email" className="contact--label">
@@ -37,22 +127,31 @@ export default function Contact() {
                 name="email"
                 id="email"
                 required
+                value={input.email}
+                onChange={handleEmail}
               />
             </label>
-            <label htmlFor="phone-number" className="contact--label">
+            <label htmlFor="phoneNumber" className="contact--label">
               <span className="text-md">Phone number</span>
               <input
                 type="number"
                 className="contact--input text-md"
-                name="phone-number"
-                id="phone-number"
-                required
+                name="phoneNumber"
+                id="phoneNumber"
+                value={input.phoneNumber}
+                onChange={handlePhoneNumber}
               />
             </label>
           </div>
-          <label htmlFor="choode-topic" className="contact--label">
+          <label htmlFor="topic" className="contact--label">
             <span className="text-md">Choose a topic</span>
-            <select id="choose-topic" className="contact--input text-md">
+            <select 
+              name="topic" 
+              id="topic" 
+              className="contact--input text-md"
+              value={input.topic}
+              onChange={handleTopic}
+            >
               <option>Select One...</option>
               <option>Looking for a web developer.</option>
               <option>Interested in partneship.</option>
@@ -63,19 +162,23 @@ export default function Contact() {
             <span className="text-md">Message</span>
             <textarea
               className="contact--input text-md"
+              name="message"
               id="message"
               rows="8"
               placeholder="Type your message..."
+              value={input.message}
+              onChange={handleMessage}
             />
-          </label>
-          <label htmlFor="checkboc" className="checkbox--label">
-            <input type="checkbox" required name="checkbox" id="checkbox" />
-            <span className="text-sm">I accept the terms</span>
           </label>
           <div>
             <button className="btn btn-primary contact--form--btn">Submit</button>
           </div>
         </form>
+        {successMessage && (
+        <div className="success-message">
+          <p>{successMessage}</p>
+        </div>
+        )}
       </section>
     );
   }
