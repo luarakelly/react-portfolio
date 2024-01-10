@@ -67,7 +67,7 @@ export default function Contact() {
     }
 
     // http requests
-    axios.post('http://localhost:5000/api/contactForm', data)
+    axios.post('https://emailsender-cbd2.onrender.com/api/contactForm', data)
     .then(res=>{
       setInput({sent:true})
       setSuccessMessage('Message sent successfully! Check your email for further details.');
